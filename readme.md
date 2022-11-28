@@ -2,21 +2,21 @@
 
 This dataset contains 14,58,644 observations of New York City Taxi data. Each observation represents a Taxi ride that has been done in the New York City.
 
-The Dataset is available at - https://drive.google.com/file/d/10tjPuNW4n6qTTTMyagmDGSbfDmxd0RBK/view?usp=sharing
+The Original Dataset is available at - https://drive.google.com/file/d/10tjPuNW4n6qTTTMyagmDGSbfDmxd0RBK/view?usp=sharing
 
 ## Description of the Columns
 
-id - The id column shows us the unique id for each taxi ride.
-vendor_id – Vendor Id is of 2 types based on the trip duration of the customer.
-pickup_datetime – Time and date of which the customer has been picked up by the taxi driver. 
-dropoff_datetime - Time and date of which the customer has been dropped by the taxi driver. 
-passenger_count – Number of the passengers in a particular taxi trip. 
-pickup_longitude – The longitude coordinates of the pickup location of the customer. 
-pickup_latitude – The latitude coordinates of the pickup location of the customer. 
-dropoff_longitude – The longitude coordinates of the drop off location of customer. 
-dropoff_latitude – The longitude coordinates of the drop off location of the customer. 
-store_and_fwd_flag – This depicts whether the customer would move forward with a extension of the trip or they get down at the same place.
-trip_duration – Total trip duration of a particular taxi ride.
+id - The id column shows us the unique id for each taxi ride. <br>
+vendor_id – Vendor Id is of 2 types based on the trip duration of the customer. <br>
+pickup_datetime – Time and date of which the customer has been picked up by the taxi driver. <br>
+dropoff_datetime - Time and date of which the customer has been dropped by the taxi driver. <br>
+passenger_count – Number of the passengers in a particular taxi trip. <br>
+pickup_longitude – The longitude coordinates of the pickup location of the customer. <br>
+pickup_latitude – The latitude coordinates of the pickup location of the customer. <br>
+dropoff_longitude – The longitude coordinates of the drop off location of customer. <br>
+dropoff_latitude – The longitude coordinates of the drop off location of the customer. <br>
+store_and_fwd_flag – This depicts whether the customer would move forward with a extension of the trip or they get down at the same place. <br>
+trip_duration – Total trip duration of a particular taxi ride. <br>
 
 
 Out main objective is to perform EDA on the given dataset and draw useful conclusions about general trends in New York City and how different factors affecting taxi trips in New York City vary and are correlated. We can perform various analysis based on the interest shown in taxi rides booking in NYC.
@@ -90,6 +90,6 @@ Trip Duration related to Number of Passengers in a Ride
 As we can see, as the passenger count increases, the trip duration gradually increases.
 
 
-## Conclusion (Until now)
+## Conclusion
 First, we have taken the data set and performed some statistical methods to better understand the dataset. We have checked the shape and got to know that we have 50,000 rows of data. We got to know that there is a linearly proportional relation between the passenger count and the trip duration. That has been clearly depicted using the logarithmic histogram plotted previously. Later we have plotted a scatter plot to check the number of values that lie in different ranges. That showed us that there were some outliers that were affecting the whole data set. Some trips are if 2 days from east to west coast of United States. So, these trips don’t come under the regular taxi trips that are useful for analysing the patterns in taxi data. We should remove the outliers using some statistical methods like considering the values within the 1.5 times the Interquartile Range (which is the statistically ideal range in which outliers are not present). To perform this task, we have calculated the Quartiles. Interquartile Range can be calculated by using the following formula: IQR = Q3 - Q1. The range without outlier is [1.5IQR+Q1, Q3+1.5IQR]. So, there are 13,84,424 values after removing the Outliers. So, we have plotted the box plot again to visualize whether the outliers have been removed or not. As we noticed in the 2nd Boxplot, majority of the outliers have been removed. Later we have plotted Scatter Plot to understand how the data has been distributed.
 
